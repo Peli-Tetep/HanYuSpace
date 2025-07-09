@@ -220,7 +220,7 @@ header img{
     justify-content: center;
 }
 .card-1{
-    width: 60%;
+    width: 50%;
     background-color: var(--white);
     border: none;
     border-radius: 5px;
