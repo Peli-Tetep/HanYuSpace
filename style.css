@@ -121,7 +121,7 @@ header{
 }
 
 .big-button:hover{
-    background-color: #c90505;
+    background-color: #e60d0d;
 }
 
 .headimage{
@@ -248,7 +248,7 @@ header img{
     transition: 0.3s ease;
 }
 .small-button:hover{
-    background-color: #c90505;
+    background-color: #e60d0d;
 }
 .card-1 img{
     width: 100%;
@@ -304,6 +304,7 @@ header img{
     padding: 6rem 4rem;
     background-image: url(bg.png);
     background-size: cover;
+    background-position-y: -4rem;
 }
 
 #review h2{
@@ -314,39 +315,51 @@ header img{
 }
 
 .reviews {
-    margin: 0 4rem;
+    margin: 0 1rem;
+    padding: 1rem;
     display: flex;
     gap: 30px;
+    position: relative;
     overflow-x: auto;
 }
-.reviews::-webkit-scrollbar {
-    height: 4px;
+.reviews:hover {
+  scroll-behavior: smooth;
 }
-.reviews::-webkit-scrollbar-thumb {
+.reviews::-webkit-scrollbar {
+    display: none;
+    /* height: 4px; */
+}
+/* .reviews::-webkit-scrollbar-thumb {
     background-color: var(--red);
     border-radius: 10px;
-}
+} */
 
 .review-card {
     flex: 0 0 300px;
     background-color: white;
     text-align: justify;
-    margin-bottom: 40px;
+    margin-bottom: 5rem;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.5s ease;
+    transition: 0.5s ease;
 }
-/* .review-card:hover{
-    transform: translateY(-5px) ;
-} */
+.review-card:hover{
+    transform: translateY(-2px);
+}
+
+.review-text{
+    height: 8rem;
+}
+
 
 .review-card h3{
     color: var(--red);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .review-card p{
+    font-size: 0.9rem;
     color: var(--blue);
     margin-bottom: 20px;
 }
@@ -356,8 +369,7 @@ header img{
 
 
 #tutorial{
-    padding: 6rem 4rem;
-    margin: 4rem 0;
+    padding: 4rem 4rem 6rem;
 }
 #tutorial h2{
     font-size: 3rem;
@@ -369,7 +381,7 @@ header img{
     display: flex;
     align-items: center;        
     justify-content: center; 
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--white);
     border: none;
     border-radius: 5px;
@@ -377,7 +389,7 @@ header img{
     width: 90%;
     margin: 1rem auto;
     flex-wrap: wrap;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 .tutor-box:hover{
     scale: 101%;
@@ -385,9 +397,10 @@ header img{
 .text-tutor{
     flex: 2;
     min-width: 200px;
-    height: 150px;
+    height: auto;
     text-align: center;
-    padding: 2rem;
+    justify-content: center;
+    padding: 1rem;
 }
 .text-tutor h3{
     color: var(--red);
@@ -395,6 +408,7 @@ header img{
 }
 .text-tutor p{
     color: var(--blue);
+    font-size: 0.9rem;
 }
 .tutor-icon{
     flex: 1;
@@ -413,8 +427,9 @@ header img{
     align-items: center;
     flex: 1;
     width: 100%;
-    max-width: 435px;
+    max-width: 410px;
     height: auto;
+    border-radius: 5px;
 }
 
 
@@ -459,7 +474,8 @@ header img{
     font-size: 1.2rem;
 }
 
-.kontak-grid a{
+.kontak-grid a, .kontak-grid p{
+    font-size: 0.9rem;
     color: var(--white);
     text-decoration: none;
     display: block;
@@ -470,10 +486,10 @@ header img{
 
 
 footer{
+    font-size: 0.9rem;
     background-color: var(--red);
     padding: 1rem 4rem;
     color: var(--white);
     font-weight: bold;
-    /* border-top: 2px solid var(--white); */
 }
 

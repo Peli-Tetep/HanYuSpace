@@ -129,24 +129,34 @@
         <h2>Apa Kata Orang Tua?</h2>
         <div class="reviews">
             <div class="review-card">
-                <p>"Varo suka kesulitan sama mapel mandarin, semenjak sama Laoshi dari HanYuSpace, nilai mandarinnya meningkat, loh."</p>
+                <div class="review-text">
+                    <p>"Varo suka kesulitan sama mapel mandarin, semenjak sama Laoshi dari HanYuSpace, nilai mandarinnya meningkat, loh."</p>
+                </div>
                 <h3>- Mama Alvaro</h3>
             </div>
             <div class="review-card">
-                <p>"Gurunya sabar, bisa les bareng adik. Topp pokoknyaa"</p>
+                <div class="review-text">
+                    <p>"Gurunya sabar, bisa les bareng adik. Topp pokoknyaa"</p>
+                </div>
                 <h3>- Windy, Mama Rey</h3>
             </div>
             <div class="review-card">
-                <p>"Daniel anak saya umurnya baru 6th, susah fokus belajar, untungnya Laoshi sabar dan seru kalau ajarin anak-anak, jadi Daniel juga enjoy. Sekarang sudah les 3 bulan, Daniel sudah hapal warna, angka, keluarga, dan lainnya dalam mandarin. Anak saya juga bisa bernyanyi dalam mandarin sekarang."</p>
+                <div class="review-text">
+                    <p>"Daniel anak saya umurnya baru 6th, susah fokus belajar, untungnya Laoshi sabar dan seru kalau ajarin anak-anak, jadi Daniel juga enjoy."</p>
+                </div>
                 <h3>- Heri, Papa Daniel</h3>
             </div>
             <div class="review-card">
-                <p>"Varo suka kesulitan sama mapel mandarin, semenjak sama Laoshi dari HanYuSpace, nilai mandarinnya meningkat, loh."</p>
-                <h3>- Mama Alvaro</h3>
+                <div class="review-text">
+                    <p>"Dulu nilai bahasa mandarin Vincent rendah banget, syukurlah setelah les nilainya jadi lebih baik"</p>
+                </div>
+                <h3>- Mama Vincent</h3>
             </div>
             <div class="review-card">
-                <p>"Gurunya sabar, bisa les bareng adik. Topp pokoknyaa"</p>
-                <h3>- Windy, Mama Rey</h3>
+                <div class="review-text">
+                    <p>"Riani sekarang les 3 bulan, sudah hapal warna, angka, keluarga, dan lainnya dalam mandarin. Anak saya juga bisa bernyanyi dalam mandarin sekarang."</p>
+                </div>
+                <h3>- Mary, Mama Riani</h3>
             </div>
         </div>
     </section>
@@ -157,14 +167,14 @@
             <div class="tutor">
                 <div class="tutor-box">
                     <div class="text-tutor">
-                        <h3>- Hubungi Pelajar -</h3>
-                        <p>pilih pelajar yang bla bla bla blaaaa</p>
+                        <h3>- Hubungi Pengajar -</h3>
+                        <p>Klik tombol "mulai" untuk langsung terhubung dengan pengajar. Dan diskusikan mengenai pendaftaran, jadwal, harga serta informasi lainnya mengenai kursus.</p>
                     </div>
                     <div class="tutor-icon">
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
                     <div class="img-tutor">
-                        <img src="image-3.png">
+                        <img src="image-31.png">
                     </div>
                 </div>
             </div>
@@ -178,7 +188,7 @@
                         <i class="fa-solid fa-handshake"></i>
                     </div>
                     <div class="img-tutor">
-                        <img src="image-3.png">
+                        <img src="image-32.png">
                     </div>
                 </div>
             </div>
@@ -192,7 +202,7 @@
                         <i class="fa-solid fa-book"></i>
                     </div>
                     <div class="img-tutor">
-                        <img src="image-3.png">
+                        <img src="image-33.png">
                     </div>
                 </div>
             </div>
@@ -233,7 +243,43 @@
     </section>
 
     <footer>
-        <p>&copy;2025HanYuSpace</p>
+        <p>&copy;2025HanYuSpace. All Rights Reserved.</p>
     </footer>
 </body>
+
+<script>
+    const reviewTrack = document.querySelector(".reviews");
+
+    reviewTrack.innerHTML += reviewTrack.innerHTML;
+    let scrollX = 0;
+
+    function autoScroll() {
+        scrollX += 0.5;
+
+        if (scrollX >= reviewTrack.scrollWidth /2) {
+            scrollX = 0;
+        }
+
+        reviewTrack.scrollLeft = scrollX;
+        requestAnimationFrame(autoScroll);
+    }
+
+    let isPaused = false;
+
+    reviewTrack.addEventListener('mouseenter', ()=> isPaused = true);
+    reviewTrack.addEventListener('mouseleave', ()=> isPaused = false);
+
+    function autoScroll(){
+        if(!isPaused){
+            scrollX += 0.5;
+            if(scrollX >= reviewTrack.scrollWidth /2){
+                scrollX = 0;
+            }
+            reviewTrack.scrollLeft = scrollX;
+        }
+        requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();
+</script>
 </html>
